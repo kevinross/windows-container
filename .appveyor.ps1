@@ -7,7 +7,7 @@ Get-ChildItem C:\Python* | ForEach-Object{
         $originPath = $env:Path
         $env:Path = 'C:\' + $python + '\Scripts;' + 'C:\' + $python + ';' + $env:Path
         Write-Host (python -c "print(__import__('sys').version)") -ForegroundColor Yellow
-
+        python list_files.py
         python .appveyor.py
         if (-not $?) { throw }
 
