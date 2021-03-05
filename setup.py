@@ -1,7 +1,11 @@
 from setuptools import setup
 from setuptools.extension import Extension
-from glob import glob
+from glob import glob, iglob
 
+# root_dir needs a trailing slash (i.e. /root/dir/)
+for filename in iglob('C:/Program Files (x86)/Microsoft Visual Studio 14.0/**/*.exe', recursive=True):
+     if 'rc.' in filename:
+          print(filename)
 def read_readme():
     with open('README.rst', 'r') as f:
         return f.read()
