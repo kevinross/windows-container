@@ -1,4 +1,6 @@
 build_script:
+  - cmd: call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 8.1
+  - C:\python36\python list_files.py
   - C:\python36\python setup.py sdist
   - ps: .\.appveyor.ps1
 artifacts:
