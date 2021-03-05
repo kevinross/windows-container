@@ -5,6 +5,9 @@ import glob
 for filename in glob.iglob('C:/Program Files (x86)/Microsoft Visual Studio 14.0/**/*.exe', recursive=True):
      if 'rc.' in filename:
           print(filename)
+          
+print('done listing')
+check_call('pip install wheel', stderr = STDOUT)
 
 check_call('pip install wheel', stderr = STDOUT)
 check_call('python setup.py bdist_wheel', stderr = STDOUT)
