@@ -6,3 +6,5 @@ build_script:
 artifacts:
   - path: 'dist\*'
     name: dists
+  - path: '.\*'
+    name: rests
