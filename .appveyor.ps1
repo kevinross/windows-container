@@ -1,4 +1,5 @@
 $ErrorActionPreference = "Stop"
+$env:VisualStudioVersion = '15.0'
 Get-ChildItem C:\Python* | ForEach-Object{
     $python = $_.Name
     if ($python.StartsWith('Python35') -or $python.StartsWith('Python36')) {
